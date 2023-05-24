@@ -32,10 +32,22 @@ To use this workflow in your own repository, follow these steps:
 
 Please ensure that you customize the workflow file by replacing `<username>/<repository-A>` and `<username>/<repository-B>` with the appropriate paths to your GitHub repositories.
 
+## Triggering Workflow from Repository B
+
+To trigger the workflow in repository A from repository B, follow these steps:
+
+1. Copy the contents of the workflow file provided in this repository (e.g., `.github/workflows/dispatch.yml`).
+
+2. Navigate to your repository B on GitHub and go to the "Actions" tab.
+
+3. Click on the "New workflow" button or select an existing workflow file if you already have one.
+
+4. Name your workflow file (e.g., `dispatch.yml`), and paste the copied contents into the editor.
+
+5. Save the workflow file, and GitHub Actions will automatically start running the workflow whenever a new tag is pushed to repository B. The workflow will dispatch a custom event to trigger the release workflow in repository A.
+
+Please ensure that you customize the workflow file by replacing `<username>/<repository-A>` with the appropriate path to your repository A.
+
 ## Conclusion
 
-By utilizing this GitHub Action workflow, you can streamline the process of creating GitHub Releases for repositories A and B. It ensures that whenever a new SemVer tag is added to either repository, a corresponding release is automatically generated for repository A. This automation simplifies version management and allows for efficient distribution and communication with users.
-
-If you have any questions or encounter any issues, please don't hesitate to reach out to the repository maintainers.
-
-Happy releasing!
+By utilizing these GitHub Action workflows, you can streamline the process of creating GitHub Releases for repositories A and B. It ensures that whenever a new SemVer tag is added to either repository, a corresponding release is automatically generated for repository A. This automation simplifies version management and allows

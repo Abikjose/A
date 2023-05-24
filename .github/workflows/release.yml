@@ -4,7 +4,9 @@ on:
   push:
     tags:
       - '*'
-
+  repository_dispatch:
+    types:
+      - create_release
 jobs:
   create_release:
     runs-on: ubuntu-latest
